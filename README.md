@@ -25,7 +25,21 @@ Slope is the measue of how steep is the data distributed on the plane.
 Intercept(Bias) is like a default value of the label when there is no data. The default level of toxity.
 As
 
-- **point 2:** How to get the weights? How to define the algorithm?
+**point 2:** How to get the weights? How to define the algorithm?
+
+A linear regression is a line which wants to fit in the best way all points. In this way, we need to set up an algorithm to find the weigths. There are many ways to set up this procedure, but here is the general way:
+
+A basic algorithm:
+
+- Input: points, a dataset of points
+- Output: a line which passes close to the data,  a model which best fit the data
+- Procedure:
+    1. pick a model with random weigth and bias
+    2. repeat many times: Adjust the weigths and bias to improve predictions
+    3. return a model
+    
+At first look, we can said the weights are between [0.5, 1] and the bias between [3, 9]
+
 - **point 3:** How to measure if our algorithm is the best? How to get the best weigths?
 - **point 5:** How to evaluate the results?
 - **point 4:** How to optimize the algorithm?
