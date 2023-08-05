@@ -1,7 +1,7 @@
-numpy==1.24.3
-pandas==2.0.1
-scipy==1.10.1
-tqdm
-matplotlib
-scikit-learn
-seaborn
+numpy==1.25.2
+pandas==2.0.3
+scipy==1.11.1
+tqdm==4.65.0
+matplotlib==3.7.2
+scikit-learn==1.3.0
+seaborn==0.12.2

@@ -7,9 +7,9 @@ Hello guys, I will try to explain shortly about linear regression models. As far
 A basic introduction of machine learning, we need to think how machine learn? ...
 
 
-# **point 0:** How to explore the data?
+# Point 0: How to explore the data?
 
-# **point 1:** How to define the model? 
+# Point 1: How to define the model? 
 
 A linear regression model can be represented as a linear combination of features to represent a label. It is like a line with an slope ans intercep(bias).
 
@@ -34,7 +34,7 @@ Slope is the measue of how steep is the data distributed on the plane.
 Intercept(Bias) is like a default value of the label when there is no data. The default level of toxity.
 As
 
-# **point 2:** How to get the weights? How to define the algorithm?
+# Point 2: How to get the weights? How to define the algorithm?
 
 A linear regression is a line which wants to fit in the best way all points. In this way, we need to set up an algorithm to find the weigths. There are many ways to set up this procedure, but here is the general way:
 
@@ -49,7 +49,7 @@ A basic algorithm:
     
 At first look, we can said the weights are between [0.5, 1] and the bias between [3, 9]
 
-# **point 3:** How to measure/evaluate if our algorithm is the best? How to get the best weigths?
+# Point 3: How to measure/evaluate if our algorithm is the best? How to get the best weigths?
 
 To measure we need to know the diference about real value and predicted value
 
@@ -57,7 +57,7 @@ MAE
 MSE
 RMSE
 
-# **point 5:** How to optimize the algorithm?
+# Point 4: How to optimize the algorithm?
 
 
-# **point 4:** How to use the model?
+# Point 5: How to use the model?
