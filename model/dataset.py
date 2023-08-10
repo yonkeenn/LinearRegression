@@ -35,5 +35,49 @@ df[(df.cylinders == 4)]['horsepower'].mean(), df[(df.cylinders == 6)]['horsepowe
 # As we can see, we can use the mean of "ford" car name feature:
 df.horsepower.fillna(ford4_mean, inplace = True)
 
+
+def detect_outlier(X):
+    """
+    X: dataframe
+    """
+    outliers = []
+    for i in range(X.shape[1]-1):
+        first_q = np.percentile(X[X.columns[i]], 25)
+        third_q = np.percentile(X[X.columns[i]], 75) 
+        IQR = 1.5*(third_q - first_q)
+        minimum = first_q - IQR 
+        maximum = third_q + IQR
+        
+        if(minimum > np.min(X[X.columns[i]]) or maximum < np.max(X[X.columns[i]])):
+            outliers.append(X.columns[i])
+            print(X.columns[i], "There is Outlier")
+    return outliers
+
+# Removing outliers
+def remove_outlier(df, outliers):
+    """
+    df: dataframe
+    outliers: outliers
+    """
+    
+    print("The outliers are :", outliers)
+    
+    print("Removing outliers ......")
+    for col in outliers:
+        first_q = np.percentile(df[col], 25)
+        third_q = np.percentile(df[col], 75) 
+        #IQR = 1.5*(third_q - first_q)
+        IQR = (third_q - first_q)
+        minimum = first_q - IQR 
+        maximum = third_q + IQR
+    
+        median = df[col].median()
+    
+        df.loc[df[col] < minimum, col] = median 
+        df.loc[df[col] > maximum, col] = median
+    return df
+
+
+
 if __name__ == "__main__":
     print(header)
